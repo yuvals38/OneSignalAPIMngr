@@ -43,6 +43,10 @@
     <br />
     @if (ViewBag.displayMenu == "Yes")
     {
+        <p>
+            Enter App name:
+        </p>       
+        <br />
         using (Html.BeginForm("CreateApp", "Apps", FormMethod.Post))
         {
             <input type="text" id="name" name="name" value="" />

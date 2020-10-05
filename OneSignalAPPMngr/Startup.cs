@@ -72,6 +72,13 @@ namespace OneSignalAPPMngr
 				roleManager.Create(role);
 
 			}
+			if (!roleManager.RoleExists("Data Entry"))
+			{
+				var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+				role.Name = "DataEntry";
+				roleManager.Create(role);
+
+			}
 		}
 	}
 }
