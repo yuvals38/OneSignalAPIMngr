@@ -1,4 +1,4 @@
-# OneSignalAPIMngr
+# OneSignal API Apps Manager
  
  One Signal App Manager uses OneSignal API to add,update and view apps.
  As administrator of the site the credentials to use are:
