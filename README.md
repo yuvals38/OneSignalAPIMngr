@@ -5,6 +5,10 @@
  Visual Studio 2019 <br/>
  MVC with EF <br/>
  
+ The Web API is a fixed port and read from Web.Config (can be configured): <br/>
+ key: "OneSignalAPI" <br/> 
+ value: "http://localhost:50631/api/apps/"
+ 
  As administrator of the site the credentials to use are:<br/>
  user: admin123 <br/>
  password: A@Z200711 <br/>
