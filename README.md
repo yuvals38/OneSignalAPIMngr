@@ -9,14 +9,14 @@
  key: "OneSignalAPI" <br/> 
  value: "http://localhost:50631/api/apps/"
  
- As administrator of the site the credentials to use are:<br/>
+ As administrator (predefined) of the site the credentials to use are:<br/>
  user: admin123 <br/>
  password: A@Z200711 <br/>
  
  As the administrator you are able to manage apps (OneSignal).
  The admin has rights to update OR add new apps (via OneSignal APIs).
  
- Registering as a non-administrator ,the user is only able to VIEW the current OneSignal apps. 
+ Registering as a non-administrator (register with any details) ,the user is only able to VIEW the current OneSignal apps. 
  
  
  
