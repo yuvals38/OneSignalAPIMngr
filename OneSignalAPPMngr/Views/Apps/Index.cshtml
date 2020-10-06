@@ -57,27 +57,12 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
 <script type="text/javascript">
-    //$(function () {
-   
-    //    if ($("#tblApps tr").length > 1) {
-    //        $("#tblApps tr:eq(1)").remove();
-    //    } else {
-    //        var row = $("#tblApps tr:last-child");
-    //        row.find(".Edit").hide();
-
-    //        row.find("span").html('&nbsp;');
-    //    }
-    //});
 
     function AppendRow(row, customerId, name, country) {
-        //Bind CustomerId.
-        $(".id", row).find("span").html(id);
 
-        //Bind Name.
+        $(".id", row).find("span").html(id);
         $(".name", row).find("span").html(name);
         $(".name", row).find("input").val(name);
-
-
 
         row.find(".Edit").show();
 
@@ -112,7 +97,6 @@
             }
         });
         row.find(".Edit").show();
-
         row.find(".Cancel").hide();
         $(this).hide();
 
@@ -123,7 +107,6 @@
         $.ajax({
             type: "POST",
             url: "/Apps/UpdateApp",
-           // data: '{id:' + app.id + ',name:' + app.name + '}',
             data: '{app:' + JSON.stringify(app) + '}',
             contentType: "application/json; charset=utf-8",
             dataType: "json"
@@ -149,12 +132,4 @@
     });
 
 
-  //  });
 </script>
-@*<script>
-    $('#mybutton').click(function(){
-        $.post( "/Apps/CreateApp", {name: "test2"}, function( data ) {
-            alert('app created');
-        });
-    });
-    </script>*@

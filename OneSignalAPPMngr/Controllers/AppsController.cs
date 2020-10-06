@@ -18,7 +18,7 @@ namespace OneSignalAPPMngr.Controllers
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("http://localhost:50631/api/apps/View_Apps");
-                //HTTP GET
+   
                 var responseTask = client.GetAsync("View_Apps");
                 responseTask.Wait();
 
@@ -48,7 +48,7 @@ namespace OneSignalAPPMngr.Controllers
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("http://localhost:50631/api/apps/Add_App" + "?name=" + name );
-                //HTTP GET
+
                 var responseTask = client.GetAsync("Add_App" + "?name=" + name);
                 responseTask.Wait();
 
@@ -71,7 +71,7 @@ namespace OneSignalAPPMngr.Controllers
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("http://localhost:50631/api/apps/Update_App" + "?id=" + app.id + "&name=" + app.name);// + "&name=" + name);
-                //HTTP GET
+
                 var responseTask = client.GetAsync("Update_App" + "?id=" + app.id + "&name=" + app.name);// + "&name=" + name);
                 responseTask.Wait();
 
@@ -80,14 +80,11 @@ namespace OneSignalAPPMngr.Controllers
                 {
                     var readTask = result.Content.ReadAsStringAsync();
 
-                    // app = JsonConvert.DeserializeObject<List<AppsViewModel>>(readTask.Result);
-
                     readTask.Wait();
 
                 }
                 return RedirectToAction("Index");
-                //Index();
-                // return View("Index", app);
+  
             }
         }
     }

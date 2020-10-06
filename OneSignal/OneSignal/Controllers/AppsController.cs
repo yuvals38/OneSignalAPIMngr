@@ -13,21 +13,20 @@ using System.Web.Script.Serialization;
 
 namespace OneSignal.Controllers
 {
-    //[Authorize(Roles = "Admin")]
-    //[RoutePrefix("api/Account")]
+
     public class AppsController : ApiController
     {
         public AppsController() { }
         [HttpGet]
+        //Get ALL Apps
         public JArray View_Apps()
         {
 
-
             JArray arrResult = new JArray();
-           // string responseContent = null;
+  
             try
             {
-                string str = WebApiConfig.URL_Notification;// +  WebApiConfig.APP_ID;// "?app_id=" + WebApiConfig.API_KEY;
+                string str = WebApiConfig.URL_Notification;
 
                 var request = WebRequest.Create(str) as HttpWebRequest;
                 request.KeepAlive = true;
@@ -35,37 +34,20 @@ namespace OneSignal.Controllers
                 request.ContentType = "application/json; charset=utf-8";
 
                 request.Headers.Add("Authorization", "Basic " + WebApiConfig.API_KEY);
-
-
-                //HttpWebRequest request = (HttpWebRequest)WebRequest.Create(str);
-                //request.ContentType = "application/json";
-                //request.Headers["Authorization"] = "Basic " + WebApiConfig.API_KEY;
-                //request.PreAuthenticate = true;
-                 
                 HttpWebResponse response = request.GetResponse() as HttpWebResponse;
-
-
-
 
                 using (Stream responseStream = response.GetResponseStream())
                 {
                     StreamReader reader = new StreamReader(responseStream, Encoding.UTF8);
 
                     JArray array = JArray.Parse(reader.ReadToEnd());
-                 //   JObject Jobject = JObject.Parse(reader.ReadToEnd());
-                  //  JArray array = JArray.Parse(Jobject.GetValue("apps").ToString());
-
 
                     for (int i = 0; i < array.Count; i++)
                     {
 
-                        // successful = Number of devices successfully transmitted
-                        // converted = Number of users who have clicked / tapped on your notification.
-
 
                         int successful = Convert.ToInt32(array[i]["successful"]);
                         int converted = Convert.ToInt32(array[i]["converted"]);
-                        //int rate_of_click = (100 / successful * converted);
 
                         JObject obj = new JObject();
                         obj.Add("id", array[i]["id"]);
@@ -99,6 +81,7 @@ namespace OneSignal.Controllers
         }
 
         [HttpGet]
+        //Add a new App
         public JObject Add_App(string name)
         {
            
@@ -140,7 +123,7 @@ namespace OneSignal.Controllers
 
                     }
                 }
-               // return responses;
+  
                     return objResult;
 
             }
@@ -152,25 +135,22 @@ namespace OneSignal.Controllers
                 objError.Add("status", NUMARATOR.ERROR.ToString());
                 objError.Add("messages", e.ToString());
                  return objError;
-                //return responses;
 
             }
 
         }
 
         [HttpGet]
+        //Update an existing App
         public JObject Update_App(string id,string name)
         {
-            HttpResponseMessage responses = null;
+   
             var request = WebRequest.Create(WebApiConfig.URL_Notification + "/" + id + "?name=" + name) as HttpWebRequest;
 
             request.KeepAlive = true;
             request.Method = "PUT";
             request.ContentType = "application/json; charset=utf-8";
             request.Headers.Add("Authorization", "Basic " + WebApiConfig.API_KEY);
-
-            //HttpWebResponse response = request.GetResponse() as HttpWebResponse;
-            //return response;
 
             var serializer = new JavaScriptSerializer();
             var obj = new
@@ -203,7 +183,6 @@ namespace OneSignal.Controllers
 
                     }
                 }
-                // return responses;
                 return objResult;
 
             }
@@ -215,7 +194,6 @@ namespace OneSignal.Controllers
                 objError.Add("status", NUMARATOR.ERROR.ToString());
                 objError.Add("messages", e.ToString());
                 return objError;
-                //return responses;
 
             }
 
