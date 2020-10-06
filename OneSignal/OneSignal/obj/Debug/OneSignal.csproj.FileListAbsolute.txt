@@ -313,7 +313,6 @@ C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignal\OneSignal\bin\System.Net.Htt
 C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignal\OneSignal\bin\System.Web.Http.xml
 C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignal\OneSignal\bin\System.Web.Http.WebHost.xml
 C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignal\OneSignal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignal\OneSignal\obj\Debug\OneSignal.csprojAssemblyReference.cache
 C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignal\OneSignal\obj\Debug\OneSignal.csproj.CoreCompileInputs.cache
 C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignal\OneSignal\obj\Debug\OneSignal.csproj.CopyComplete
 C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignal\OneSignal\obj\Debug\OneSignal.dll
