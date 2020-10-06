@@ -167,4 +167,3 @@ C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignalAPPMngr\obj\Debug\OneSignalAp
 C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignalAPPMngr\obj\Debug\OneSignalApps.csproj.CopyComplete
 C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignalAPPMngr\obj\Debug\OneSignalAPPMngr.dll
 C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignalAPPMngr\obj\Debug\OneSignalAPPMngr.pdb
-C:\work\OneSignalAPIMngr\OneSignalAPIMngr\OneSignalAPPMngr\obj\Debug\OneSignalApps.csprojAssemblyReference.cache

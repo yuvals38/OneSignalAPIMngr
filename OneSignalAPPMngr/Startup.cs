@@ -20,7 +20,6 @@ namespace OneSignalAPPMngr
 		}
 
 
-		// In this method we will create default User roles and Admin user for login
 		private void createRolesandUsers()
 		{
 			ApplicationDbContext context = new ApplicationDbContext();
@@ -55,23 +54,7 @@ namespace OneSignalAPPMngr
 				}
 			}
 
-			// creating Creating Manager role 
-			if (!roleManager.RoleExists("Manager"))
-			{
-				var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-				role.Name = "Manager";
-				roleManager.Create(role);
-
-			}
-
-			// creating Creating Employee role 
-			if (!roleManager.RoleExists("Employee"))
-			{
-				var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-				role.Name = "Employee";
-				roleManager.Create(role);
-
-			}
+			
 			if (!roleManager.RoleExists("Data Entry"))
 			{
 				var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
