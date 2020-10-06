@@ -1,6 +1,10 @@
 # OneSignal API Apps Manager
  
  One Signal App Manager uses OneSignal API to add,update and view apps.
+ 
+ Visual Studio 2019 <br/>
+ MVC with EF <br/>
+ 
  As administrator of the site the credentials to use are:<br/>
  user: admin123 <br/>
  password: A@Z200711 <br/>
